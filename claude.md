@@ -2,18 +2,13 @@
 
 Notes for future Claude sessions working on this project.
 
+## What is Stretch Fold Repeat
+
+Stretch Fold Repeate is an application that aims to assist in creating and tracking sourdough bread making. The goal is to make it easier for people to bake bread.
+
 ## Code Quality Requirements
 
 **IMPORTANT**: This project enforces strict code quality standards.
-
-### Before Committing
-
-```bash
-ruff check .           # Lint
-ruff check . --fix     # Auto-fix
-ruff format .          # Format
-mypy app run.py        # Type check
-```
 
 ### Code Style
 
@@ -27,27 +22,10 @@ mypy app run.py        # Type check
 ```
 stretchfoldrepeat/
 ├── ios/				 # iosApplication
-│   ├── database.py      # SQLite operations
-├── docs/
-│   ├── DATA_MODEL.md    # Source of truth for system design
-│   ├── PROJECT_PLAN.md  # Implementation phases
-│   └── BANK_IMPORT_PLAN.md
-├── receipts/            # Receipt images
-├── static/              # CSS, JS
-└── run.py               # Entry point
+├── agent_docs/          # Documentation
+├── website/             # stretchfoldrepeat.com code 
 ```
+
+Ensure you are in the correct directory when working on a specfic part of the project.
 
 ## Environment Variables
-
-- `GEMINI_API_KEY` - Required for receipt processing
-- `USDA_API_KEY` - Optional for USDA FoodData Central lookups
-
-## Running
-
-```bash
-python run.py                      # Start web interface
-python run.py --process receipt.jpg    # Process single receipt
-python run.py --process-dir ./receipts # Process directory
-```
-
-See `docs/DATA_MODEL.md` for schema details.
